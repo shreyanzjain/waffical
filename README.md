@@ -8,6 +8,11 @@ Building an MCP application that connects your LLMs to your MCP APIs
 #### Features
 ---
 - [ ] Setup User Auth
+- [ ] Setup UI
+  - [ ] Setup Landing zone
+  - [ ] Setup Chat board
+  - [ ] Setup User dashboard
+  - [ ] Setup Profile
 - [ ] Setup LLM Integration
   - [ ] Open AI
   - [ ] Claude

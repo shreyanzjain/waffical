@@ -6,12 +6,14 @@ from ..services import user_service
 
 router = APIRouter()
 
+base_url = "/users"
 
-@router.post("/users", response_model=user_model.User,
+
+@router.post(f"{base_url}/create", response_model=user_model.User,
              responses={
                  status.HTTP_400_BAD_REQUEST: {
                      "description": "Bad Request: User already exists"}
-             })
+})
 async def create_user_endpoint(user: user_model.UserCreate, db: Session = Depends(get_db)):
     if (user_service.get_user_by_username(db, user.username)):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,

@@ -6,6 +6,6 @@ class Login(BaseModel):
     password: str
 
 
-class LoginOutcome(BaseModel):
-    code: int
-    message: str
+class Token(BaseModel):
+    access_token: str
+    token_type: str

@@ -20,4 +20,4 @@ EXPOSE 8000
 # Command to run the application using uvicorn
 # --host 0.0.0.0 makes the server accessible from outside the container
 # CMD ["uvicorn", "/app/main:app", "--host", "0.0.0.0", "--port", "8000"]
-CMD ["fastapi", "dev", "--host", "0.0.0.0"]
+CMD ["fastapi", "dev"]
